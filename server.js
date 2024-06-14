@@ -11,6 +11,7 @@ const port = process.env.PORT ? process.env.PORT : "3000";
 
 const authController = require("./controllers/auth.js");
 const session = require("express-session");
+const MongoStore = require('connect-mongo');
 
 mongoose.connect(process.env.MONGODB_URI);
 mongoose.connection.on("connected", () => {
@@ -37,6 +38,10 @@ app.get("/", async (req, res) => {
 });
 
 app.use("/auth", authController);
+
+app.get("/cars/new", (req, res) => {
+    res.render("cars/new.ejs");
+  });
 
 app.listen(port, () => {
   console.log(`The Park'd App is ready on port ${port}!`);

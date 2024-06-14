@@ -26,7 +26,7 @@ router.post("/sign-in", async (req, res) => {
   req.session.user = {
     username: userInDatabase.username,
   };
-  res.redirect("/");
+    res.redirect("/");
 });
 
 router.post("/sign-up", async (req, res) => {
@@ -46,8 +46,8 @@ router.post("/sign-up", async (req, res) => {
 });
 
 router.get("/sign-out", (req, res) => {
-  req.session.destroy();
-  res.redirect("/");
+  req.session.destroy()
+    res.redirect("/");
 });
 
 module.exports = router;

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Park a New Car</title>
+  </head>
+  <body>
+    <h1>Add Car to be Park'd</h1>
+    <form action="/cars" method="POST">
+      <label for="fullName">Customer Name:</label>
+      <br />
+      <input type="text" name="fullName" id="fullName" />
+      <br />
+      <br />
+      <label for="phoneNumber">Phone Number:</label>
+      <br />
+      <input type="text" name="phoneNumber" id="phoneNumber" />
+      <br />
+      <br />
+      <label for="carMake">Make:</label>
+      <br />
+      <input type="text" name="carMake" id="carMake" />
+      <br />
+      <br />
+      <label for="carModel">Model:</label>
+      <br />
+      <input type="text" name="carModel" id="carModel" />
+      <br />
+      <br />
+      <label for="carColor">Color:</label>
+      <br />
+      <input type="text" name="carColor" id="carColor" />
+      <br />
+      <br />
+      <label for="carType">Type:</label>
+      <br />
+      <br />
+      <select name="carType" id="carType">
+        <option value="sedan">Sedan</option>
+        <option value="coupe">Coupe</option>
+        <option value="suv">SUV</option>
+        <option value="van">Van</option>
+        <option value="pickup">Pickup</option>
+        <option value="other">Other</option>
+      </select>
+      <br />
+      <br />
+      <label for="carYear">Year:</label>
+      <br />
+      <input type="text" name="carYear" id="carYear" />
+      <br />
+      <br />
+      <label for="licensePlate">License Plate:</label>
+      <br />
+      <input type="text" name="licensePlate" id="licensePlate" />
+      <br />
+      <br />
+      <label for="parkingLocation">Parking Spot:</label>
+      <br />
+      <input type="text" name="parkingLocation" id="parkingLocation" />
+      <br />
+      <br />
+      <label for="damageStatus">Vehicle Damage?:</label>
+      <input type="checkbox" name="damageStatus" id="damageStatus" />
+      <br />
+      <br />
+      <label for="damageStatusNotes">If damaged, please describe below:</label>
+      <br />
+      <textarea name="damageStatusNotes" id="damageStatusNotes"></textarea>
+      <br />
+      <br />
+      <label for="parkingStatus">Parking Status:</label>
+      <br />
+      <br />
+      <select name="parkingStatus" id="parkingStatus">
+        <option value="staged">Staged</option>
+        <option value="parked">Parked</option>
+        <option value="returned">Returned</option>
+      </select>
+      <br />
+      <br />
+      <label for="paidStatus">Paid?:</label>
+      <input type="checkbox" name="paidStatus" id="paidStatus" />
+      <br />
+      <br />
+      <button type="submit">Park Car</button>
+    </form>
+  </body>
+</html>
