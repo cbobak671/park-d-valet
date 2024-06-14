@@ -8,6 +8,11 @@
   <body>
     <% if (user) { %>
     <h1>Welcome to Park'd, <%= user.fullName %>!</h1>
+    <p>
+      <a href="/auth/sign-out">
+        <button>Sign Out</button>
+      </a>
+    </p>
     <% } else { %>
     <h1>Welcome to Park'd!</h1>
     <p>

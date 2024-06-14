@@ -45,4 +45,9 @@ router.post("/sign-up", async (req, res) => {
   res.send(`Account created! Welcome to Park'd, ${user.fullName}.`);
 });
 
+router.get("/sign-out", (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+});
+
 module.exports = router;
