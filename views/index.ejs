@@ -6,13 +6,24 @@
     <title>Park'd App</title>
   </head>
   <body>
+    <% if (user) { %>
+    <h1>Welcome to Park'd, <%= user.fullName %>!</h1>
+    <% } else { %>
     <h1>Welcome to Park'd!</h1>
     <p>
       Park'd is the app for the modern valet experience. No more lost paper
-      tickets and unnecessary waiting for your car. We'll get you Park'd.
-    </p>
+      tickets and unnecessary waiting for your car. We'll get you Park'd soon.
+      <br>
+      <br>
+    <a href="/auth/sign-in">
+      <button>Sign In</button>
+    </a>
+    <br>
+    <br>
     <a href="/auth/sign-up">
       <button>Create Account</button>
     </a>
+  </p>
+  <% } %>
   </body>
 </html>
