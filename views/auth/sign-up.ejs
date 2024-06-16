@@ -6,7 +6,8 @@
     <title>Park'd Sign Up</title>
   </head>
   <body>
-    <h1>Create Your Park'd Account!</h1>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Create an Account to Get Park'd!</h1>
     <form action="/auth/sign-up" method="POST">
       <label for="fullName">Full Name:</label>
       <br />

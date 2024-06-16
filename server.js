@@ -6,7 +6,6 @@ const app = express();
 const mongoose = require("mongoose");
 const methodOverride = require("method-override");
 const morgan = require("morgan");
-
 const carsController = require("./controllers/cars.js");
 
 const port = process.env.PORT ? process.env.PORT : "3000";
@@ -34,18 +33,23 @@ app.use(
   })
 );
 
+app.use(passUserToView);
+
 const Car = require("./models/car.js");
 
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", async (req, res) => {
-  res.render("index.ejs", {
-    user: req.session.user,
-  });
+  if (req.session.user) {
+    res.redirect(`/users/${req.session.user._id}/cars`);
+  } else {
+    res.render("index.ejs");
+  }
 });
 
 app.use("/auth", authController);
-app.use("/users/cars", carsController);
+app.use(isSignedIn);
+app.use("/users/:userId/cars", carsController);
 
 app.get("/cars/new", (req, res) => {
   res.render("cars/new.ejs");
