@@ -1,7 +1,8 @@
-const User = require("../models/user.js");
 const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcrypt");
+
+const User = require("../models/user.js");
 
 router.get("/sign-up", (req, res) => {
   res.render("auth/sign-up.ejs");
@@ -9,6 +10,11 @@ router.get("/sign-up", (req, res) => {
 
 router.get("/sign-in", (req, res) => {
   res.render("auth/sign-in.ejs");
+});
+
+router.get("/sign-out", (req, res) => {
+  req.session.destroy()
+    res.redirect("/");
 });
 
 router.post("/sign-in", async (req, res) => {
@@ -45,9 +51,6 @@ router.post("/sign-up", async (req, res) => {
   res.send(`Account created! Welcome to Park'd, ${user.fullName}.`);
 });
 
-router.get("/sign-out", (req, res) => {
-  req.session.destroy()
-    res.redirect("/");
-});
+
 
 module.exports = router;

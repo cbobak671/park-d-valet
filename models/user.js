@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const Car = require("../models/car.js")
 
 const userSchema = new mongoose.Schema({
   fullName: String,

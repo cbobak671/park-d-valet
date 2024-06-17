@@ -52,9 +52,9 @@ app.use(isSignedIn);
 app.use("/users/:userId/cars", carsController);
 
 app.get("/cars/new", (req, res) => {
-  res.render("cars/new.ejs");
-});
-
+    res.render("cars/new.ejs");
+  });
+  
 app.post("/cars", async (req, res) => {
   console.log(req.body);
   res.redirect("/cars/new");
