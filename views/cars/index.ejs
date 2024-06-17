@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Park'd Cars</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Park'd Cars</title>
+  </head>
+  <body>
     <%- include('../partials/_navbar.ejs') %>
-  <h1>Park'd Cars</h1>
-  <a href="/cars/new">Park a New Car</a>
-</body>
+    <h1>Park'd Cars</h1>
+    <ul>
+      <% cars.forEach((car) => { %>
+      <li>
+        <a href="/cars/<%= car._id %>">
+          <%= car.carMake %> <%= car.carModel %>
+        </a>
+      </li>
+      <% }) %>
+    </ul>
+    <a href="/users/<%=user._id%>/cars/new">Park a New Car</a>
+  </body>
 </html>

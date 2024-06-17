@@ -29,9 +29,11 @@ router.post("/sign-in", async (req, res) => {
   if (!validPassword) {
     return res.send("Login failed. Wrong password. Please try again.");
   }
-  req.session.user = {
-    username: userInDatabase.username,
-  };
+
+  const user = userInDatabase.toObject()
+  delete user.password;
+
+  req.session.user = user;
     res.redirect("/");
 });
 
@@ -48,7 +50,7 @@ router.post("/sign-up", async (req, res) => {
 
   const user = await User.create(req.body);
 
-  res.send(`Account created! Welcome to Park'd, ${user.fullName}.`);
+  res.redirect("/cars");
 });
 
 
