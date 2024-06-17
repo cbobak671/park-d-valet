@@ -7,7 +7,7 @@
 </head>
 <body>
   <%- include('../partials/_navbar.ejs') %>
-  <h1><%= car.carMake %> at <%= car.carModel %></h1>
+  <h1><%= car.carMake %> <%= car.carModel %></h1>
   <p>Customer Name: <%= car.fullName %></p>
   <p>Valet Name: <%= car.valetName %></p>
   <p>Status: <%= car.parkingStatus %></p>
@@ -20,5 +20,6 @@
   <p>Damage?: <%= car.damageStatus %></p>
   <p>Damage Details: <%= car.damageStatusNotes %></p>
   <p>Paid?: <%= car.paidStatus %></p>
+  
 </body>
 </html>

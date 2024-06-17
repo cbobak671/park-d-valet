@@ -36,11 +36,10 @@ router.post("/", async (req, res) => {
 
 router.get("/:carId", async (req, res) => {
   try {
-    const currentCar = await Car.findById(req.params.carId).populate("car");
-    // const currentUser = await User.findById(req.session.user._id);
-    // const currentUser = await User.findById(req.session.user._id).populate("carId");
-    // const currentCar = currentUser.cars.id(req.params.carId);
-    res.render("show.ejs", { currentCar: currentUser.carId });
+    const currentUser = await User.findById(req.session.user._id);
+    const currentCar = await Car.findById(req.params.carId);
+    console.log(currentUser.carId);
+    res.render("cars/show.ejs", { car: currentCar });
   } catch (error) {
     console.log(error);
     res.redirect("/");
