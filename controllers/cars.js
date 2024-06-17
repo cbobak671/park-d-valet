@@ -6,8 +6,11 @@ const Car = require("../models/car.js");
 
 router.get("/", async (req, res) => {
   try {
-    const currentUser = await User.findById(req.session.user._id)
-    res.render("cars/index.ejs", { cars: currentUser.cars, });
+    const currentUser = await User.findById(req.session.user._id).populate(
+      "cars"
+    );
+    console.log(currentUser.cars);
+    res.render("cars/index.ejs", { cars: currentUser.cars });
   } catch (error) {
     console.log(error);
     res.redirect("/");
@@ -28,6 +31,19 @@ router.post("/", async (req, res) => {
   } catch (error) {
     console.log(error);
     res.redirect("/cars");
+  }
+});
+
+router.get("/:carId", async (req, res) => {
+  try {
+    const currentCar = await Car.findById(req.params.carId).populate("car");
+    // const currentUser = await User.findById(req.session.user._id);
+    // const currentUser = await User.findById(req.session.user._id).populate("carId");
+    // const currentCar = currentUser.cars.id(req.params.carId);
+    res.render("show.ejs", { currentCar: currentUser.carId });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
   }
 });
 

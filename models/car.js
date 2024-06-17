@@ -15,6 +15,8 @@ const carSchema = new mongoose.Schema({
   damageStatusNotes: String,
   parkingStatus: { type: String, enum:['staged', 'parked', 'returned'],equired: true, },
   paidStatus: String,
+  assignee: {type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',},
 });
 
 

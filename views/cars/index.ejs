@@ -9,9 +9,9 @@
     <%- include('../partials/_navbar.ejs') %>
     <h1>Park'd Cars</h1>
     <ul>
-      <% cars.forEach((car) => { %>
+      <% cars.forEach(car => { %>
       <li>
-        <a href="/cars/<%= car._id %>">
+        <a href="/users/<%= user._id %>/cars/<%= car._id %>">
           <%= car.carMake %> <%= car.carModel %>
         </a>
       </li>

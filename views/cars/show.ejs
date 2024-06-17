@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= car.carMake %> <%= car.carModel %></title>
+</head>
+<body>
+  <%- include('../partials/_navbar.ejs') %>
+  <h1><%= car.carMake %> at <%= car.carModel %></h1>
+  <p>Customer Name: <%= car.fullName %></p>
+  <p>Valet Name: <%= car.valetName %></p>
+  <p>Status: <%= car.parkingStatus %></p>
+  <p>Location - Parking Space: <%= car.parkingLocation %></p>
+  <p>Make and Model: <%= car.carMake %> <%= car.carModel %></p>
+  <p>Year: <%= car.carYear %></p>
+  <p>Color: <%= car.carColor %></p>
+  <p>Type: <%= car.carType %></p>
+  <p>License Plate: <%= car.licensePlate %></p>
+  <p>Damage?: <%= car.damageStatus %></p>
+  <p>Damage Details: <%= car.damageStatusNotes %></p>
+  <p>Paid?: <%= car.paidStatus %></p>
+</body>
+</html>
