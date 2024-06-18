@@ -4,33 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park'd App</title>
-    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/style.css" />
   </head>
   <%- include('./partials/_navbar.ejs') %>
   <body class="index-body">
+    <div class="container">
     <% if (user) { %>
-    <h1>Welcome to Park'd, <%= user.fullName %>!</h1>
+    <h1 class="welcome-heading">Welcome to Park'd, <%= user.fullName %>!</h1>
     <p>
       <a href="/auth/sign-out">
         <button>Sign Out</button>
       </a>
     </p>
     <% } else { %>
+      <div class="welcome-heading">
     <h1>Welcome to Park'd!</h1>
+  </div>
+    <div class="welcome-message">
     <p>
-      Park'd is the app for the modern valet experience. No more lost paper
-      tickets and unnecessary waiting for your car. We'll get you Park'd soon.
-      <br>
-      <br>
+      Park'd is the app for the modern valet experience. No more fumbling around for lost paper
+      tickets, worrying about your car, or long wait times when you're ready to go. We'll get you Park'd and get you on your way!
+    </p>
+    </div>
+    <br />
+    <br />
+    <div class="buttons">
     <a href="/auth/sign-in">
-      <button>Sign In</button>
+      <button class="sign-in-button">Sign In</button>
     </a>
-    <br>
-    <br>
+    <br />
+    <br />
     <a href="/auth/sign-up">
-      <button>Create Account</button>
+      <button class="sign-up-button">Create Account</button>
     </a>
-  </p>
-  <% } %>
+  </div>
+    <% } %>
+    </div>
   </body>
 </html>

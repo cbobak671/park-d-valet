@@ -2,9 +2,79 @@
 
 .index-body {
   font-family: "Quicksand", sans-serif;
+  color: rgb(34, 164, 147);
+}
+
+.index-body::before {
+  background-image: url("https://img.freepik.com/free-photo/beautiful-shot-taillights-from-vintage-cars-with-vibrant-colors_181624-15201.jpg?t=st=1718673539~exp=1718677139~hmac=32791168ce2c49cae8293a5ead53fd4425e5bc638a16306c4f52e4b0921f59ab&w=1380");
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.4;
+}
+
+.container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgb(91, 128, 173);
+  align-items: center;
+  justify-content: space-around;
+  row-gap: 0px;
+  margin: auto;
+  isolation: isolate;
+}
+.welcome-heading {
+  display: flex;
+  font-size: 60px;
+  margin-bottom: 0px;
+}
+
+.welcome-message {
+  display: flex;
+  height: 0vh;
+  max-width: 875px;
+  font-size: 26px;
+  margin: auto;
+  margin-top: 1px;
+  margin-bottom: 40px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sign-in-button,
+.sign-up-button {
+  border-radius: 25px;
+  font-size: 1.5em;
+  width: 10em;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
+  border-color: white;
+  border-width: 1px;
+}
+
+.sign-up-button {
+  background-color: rgb(252, 72, 12);
+  color: white;
+  margin: 5 0 0px 0;
+}
+
+.sign-up-button:hover {
+  background-color: rgb(34, 164, 147);
+  color: white;
+}
+
+.sign-in-button {
+  background-color: white;
+  color: rgb(34, 164, 147);
+  margin: 5px 0 0 0;
+}
+
+.sign-in-button:hover {
+  background-color: rgb(34, 164, 147);
+  color: white;
 }
