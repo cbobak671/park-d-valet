@@ -9,36 +9,38 @@
   <%- include('./partials/_navbar.ejs') %>
   <body class="index-body">
     <div class="container">
-    <% if (user) { %>
-    <h1 class="welcome-heading">Welcome to Park'd, <%= user.fullName %>!</h1>
-    <p>
-      <a href="/auth/sign-out">
-        <button>Sign Out</button>
-      </a>
-    </p>
-    <% } else { %>
+      <% if (user) { %>
+      <h1 class="welcome-heading">Welcome to Park'd, <%= user.fullName %>!</h1>
+      <p>
+        <a href="/auth/sign-out">
+          <button>Sign Out</button>
+        </a>
+      </p>
+      <% } else { %>
       <div class="welcome-heading">
-    <h1>Welcome to Park'd!</h1>
-  </div>
-    <div class="welcome-message">
-    <p>
-      Park'd is the app for the modern valet experience. No more fumbling around for lost paper
-      tickets, worrying about your car, or long wait times when you're ready to go. We'll get you Park'd and get you on your way!
-    </p>
-    </div>
-    <br />
-    <br />
-    <div class="buttons">
-    <a href="/auth/sign-in">
-      <button class="sign-in-button">Sign In</button>
-    </a>
-    <br />
-    <br />
-    <a href="/auth/sign-up">
-      <button class="sign-up-button">Create Account</button>
-    </a>
-  </div>
-    <% } %>
+        <h1>Welcome to Park'd!</h1>
+      </div>
+      <div class="welcome-message">
+        <p>
+          Park'd is the app for the modern valet experience. No more fumbling
+          around for paper tickets, worrying about your car, or long wait times
+          when you're ready to go. We'll get you Park'd so you can be on your
+          way!
+        </p>
+      </div>
+      <br />
+      <br />
+      <div class="buttons">
+        <a href="/auth/sign-in">
+          <button class="sign-in-button">Sign In</button>
+        </a>
+        <br />
+        <br />
+        <a href="/auth/sign-up">
+          <button class="sign-up-button">Create Account</button>
+        </a>
+      </div>
+      <% } %>
     </div>
   </body>
 </html>
