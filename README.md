@@ -1,6 +1,6 @@
 # Park'd
 
-![Unites States urban lights map](https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dW5pdGVkJTIwc3RhdGVzfGVufDB8fDB8fHww)
+![Three cars background image](https://img.freepik.com/free-photo/beautiful-shot-taillights-from-vintage-cars-with-vibrant-colors_181624-15201.jpg?t=st=1718673539~exp=1718677139~hmac=32791168ce2c49cae8293a5ead53fd4425e5bc638a16306c4f52e4b0921f59ab&w=1380")
 
 ---
 
@@ -10,8 +10,8 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 
 ## Screenshots
 
-![Screenshot of game start page](https://i.imgur.com/ls8LL6v.png)
-![Screenshot of gameplay](https://i.imgur.com/83mh2vk.png)
+![Park'd App homepage](https://i.imgur.com/BX9KGNV.png)
+![Park'd App create account page](https://i.imgur.com/rhvb4th.png)
 
 ## Technologies Used
 
@@ -25,7 +25,7 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 
 ## Attributions
 
-- YouTube Audio Library
+- Freepik.com
 - Google Fonts API Library
 
 ## Getting Started & Resources

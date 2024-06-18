@@ -4,25 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park'd Cars</title>
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/style.css" />
+    <link rel="stylesheet" href="../stylesheets/partials.css" />
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
-    <div class="garage-cars-body">
-      <div class="garage-cars-header">
-
-    <h1>Park'd Cars</h1>
-</div>
-    <ul>
-      <% cars.forEach(car => { %>
-      <li>
-        <a href="/users/<%= user._id %>/cars/<%= car._id %>">
-          <%= car.carMake %> <%= car.carModel %>
-        </a>
-      </li>
-      <% }) %>
-    </ul>
-  </div>
-    <a href="/users/<%=user._id%>/cars/new">Park a New Car</a>
+    <div class="garage-cars-body" >
+      <div class="garage-cars-header" >
+        <h1>Park'd Cars</h1>
+      </div>
+      <ul>
+        <% cars.forEach(car => { %>
+        <li>
+          <a href="/users/<%= user._id %>/cars/<%= car._id %>">
+            <%= car.carMake %> <%= car.carModel %>
+          </a>
+        </li>
+        <% }) %>
+      </ul>
+      <a class="park-a-new-car-link" href="/users/<%=user._id%>/cars/new"
+        >Park a New Car</a
+      >
+    </div>
   </body>
 </html>
