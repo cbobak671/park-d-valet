@@ -12,7 +12,7 @@ const authController = require("./controllers/auth.js");
 
 const port = process.env.PORT ? process.env.PORT : "3000";
 
-const path = require('path');
+const path = require("path");
 
 const MongoStore = require("connect-mongo");
 
@@ -27,7 +27,7 @@ mongoose.connection.on("connected", () => {
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride("_method"));
 app.use(morgan("dev"));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use(
   session({
@@ -54,29 +54,10 @@ app.use(isSignedIn);
 app.use("/users/:userId/cars", carsController);
 
 app.get("/cars/new", (req, res) => {
-    console.log(res.locals.user);
-    res.render("cars/new.ejs");
-  });
+  console.log(res.locals.user);
+  res.render("cars/new.ejs");
+});
 
 app.listen(port, () => {
   console.log(`The Park'd App is ready on port ${port}!`);
 });
-
-
-// comment graveyard
-// app.post("/cars", async (req, res) => {
-//   console.log(req.body);
-//   res.redirect("/cars/new");
-// });
-
-// app.post("/cars/new", async (req, res) => {
-//     try {
-//       const currentUser = await User.findById(req.session.user._id);
-//       currentUser.cars.push(req.body);
-//       await currentUser.save();
-//       res.redirect(`/users/${currentUser._id}/cars`);
-//     } catch (error) {
-//       console.log(error);
-//       res.redirect("/cars");
-//     }
-//   });
