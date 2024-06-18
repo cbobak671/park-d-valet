@@ -26,6 +26,7 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 - MongoDB
 - Mongoose
 - Node.js
+- Bcrypt
 
 ## Attributions
 
@@ -37,6 +38,7 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 Quickly get started with Park'd by signing up for an account. Follow the app link below to started.
 
 - [App link](https://cbobak671.github.io/park-d-valet-CRUD-app)
+- [Planning materials](https://trello.com/b/Al0thxTc/men-stack-crud-app-project-parkd)
 
 ## What's Next
 

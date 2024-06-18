@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park a New Car</title>
-    <link rel="stylesheet" href="../stylesheets/style.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <%- include('../partials/_navbar.ejs') %>
     <h1>Add Car to be Park'd</h1>
     <form action="/users/<%= user._id %>/cars" method="POST">
       <label for="valetName">Valet:</label>

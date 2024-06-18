@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./stylesheets/partials.css" />
+<link rel="stylesheet" href="/stylesheets/partials.css" />
 <nav>
   <% if(user) { %>
   <div class="navbar">
@@ -6,15 +6,16 @@
     <div class="nav-links">
       <a class="authlink" href="/users/<%=user._id%>/cars">Garage</a>
       <a class="authlink" href="/auth/sign-out">Sign Out </a>
+      <a class="accountlink" href="">Account</a>
     </div>
   </div>
-    <% } else { %>
-      <div class="navbar">
-        <h1 id="nav-header">Park'd</h1>
-        <div class="nav-links">
-    <a class="authlink" href="/auth/sign-in">Sign In</a>
-    <a class="authlink" href="/auth/sign-up">Create Account </a>
-  </div>
+  <% } else { %>
+  <div class="navbar">
+    <h1 id="nav-header">Park'd</h1>
+    <div class="nav-links">
+      <a class="authlink" href="/auth/sign-in">Sign In</a>
+      <a class="authlink" href="/auth/sign-up">Create Account </a>
+    </div>
   </div>
   <% } %>
 </nav>

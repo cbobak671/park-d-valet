@@ -9,7 +9,6 @@ router.get("/", async (req, res) => {
     const currentUser = await User.findById(req.session.user._id).populate(
       "cars"
     );
-    // console.log(currentUser.cars);
     res.render("cars/index.ejs", { cars: currentUser.cars });
   } catch (error) {
     console.log(error);
@@ -38,7 +37,6 @@ router.get("/:carId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     const currentCar = await Car.findById(req.params.carId);
-    // console.log(currentUser.carId);
     res.render("cars/show.ejs", { car: currentCar });
   } catch (error) {
     console.log(error);

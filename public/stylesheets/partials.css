@@ -6,13 +6,16 @@
   justify-content: space-between;
   align-items: center;
   font-family: "Quicksand", sans-serif;
+  background-color: rgb(244, 194, 178);
+
 }
 
 #nav-header {
   color: rgb(34, 164, 147);
   margin: 0;
 }
-.authlink {
+
+.authlink, .accountlink {
   text-decoration: none;
   margin: 0 15px;
   color: rgb(34, 164, 147);
@@ -22,5 +25,5 @@
 
 .authlink:hover {
   cursor: pointer;
-  color: orange;
+  color: white;
 }
