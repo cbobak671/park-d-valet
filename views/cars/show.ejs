@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= car.carMake %> <%= car.carModel %></title>
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../show.css"/>
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
+    <div class="show-page-body">
+      <div class="show-page-header">
     <h1><%= car.carMake %> <%= car.carModel %></h1>
     <p>Customer Name: <%= car.fullName %></p>
     <p>Valet Name: <%= car.valetName %></p>
@@ -33,5 +35,7 @@
     >
       <button type="submit">Remove Car from Garage</button>
     </form>
+  </div>
+</div>
   </body>
 </html>

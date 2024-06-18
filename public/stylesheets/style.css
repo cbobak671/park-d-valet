@@ -109,6 +109,11 @@ form {
   font-weight: bold;
 }
 
+.dont-have-account {
+  display: flex;
+  flex-direction: column;
+}
+
 input {
   border: 1px solid rgb(182, 182, 182);
   padding: 8px;
@@ -171,3 +176,34 @@ button {
   background-color: white;
   color: rgb(34, 164, 147);
 }
+
+ul {
+  list-style: none;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ul>a {
+  text-decoration: none;
+  color: white;
+  width: 50%;
+  background-color: rgb(252, 72, 12);
+  border-radius: 30px;
+  padding: 10px 20px;
+  margin: 15px 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+ul>a:hover {
+  background-color: white;
+  color: rgb(252, 72, 12);
+}
+
+/* Show Page */
+
+
+

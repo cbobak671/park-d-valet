@@ -4,28 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park'd Sign In</title>
-    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/style.css" />
     <link rel="stylesheet" href="../stylesheets/partials.css" />
   </head>
   <body class="index-body-sign-in-page">
     <%- include('../partials/_navbar.ejs') %>
     <div class="sign-in-container">
-    <h1>Sign in</h1>
-    <div class="sign-in-form">
-    <form action="/auth/sign-in" method="POST">
-      <label for="username">Username:</label>
-      <br />
-      <input type="text" name="username" id="username" />
-      <br />
-      <br />
-      <label for="password">Password:</label>
-      <br />
-      <input type="password" name="password" id="password" />
-      <br />
-      <br />
-      <button type="submit" id="sign-in-page-btn">Sign in</button>
-    </form>
-  </div>
-  </div>
+      <h1>Sign In</h1>
+      <div class="sign-in-form">
+        <form action="/auth/sign-in" method="POST">
+          <label for="username">Username:</label>
+          <br />
+          <input type="text" name="username" id="username" />
+          <br />
+          <br />
+          <label for="password">Password:</label>
+          <br />
+          <input type="password" name="password" id="password" />
+          <br />
+          <br />
+          <button type="submit" id="sign-in-page-btn">Sign in</button>
+          <p class="dont-have-account">Don't have an account?</p>
+          <a href="/auth/sign-up" class="dont-have-account">Create Account</a>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
