@@ -12,6 +12,9 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 
 ![Park'd App homepage](https://i.imgur.com/BX9KGNV.png)
 ![Park'd App create account page](https://i.imgur.com/rhvb4th.png)
+![Park'd App index of cars page](https://i.imgur.com/X4cJaJi.png)
+![Park'd App car details show page](https://i.imgur.com/bkioyoe.png)
+![Park'd App update car page](https://i.imgur.com/aJfaA85.png)
 
 ## Technologies Used
 
@@ -22,6 +25,7 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 - EJS
 - MongoDB
 - Mongoose
+- Node.js
 
 ## Attributions
 
