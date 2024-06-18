@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park'd App</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
   </head>
-  <body>
-    <%- include('./partials/_navbar.ejs') %>
+  <%- include('./partials/_navbar.ejs') %>
+  <body class="index-body">
     <% if (user) { %>
     <h1>Welcome to Park'd, <%= user.fullName %>!</h1>
     <p>

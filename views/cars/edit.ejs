@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Update Car <%= car.carMake %> <%= car.carModel %></title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+  </head>
+  <body>
+    <%- include('../partials/_navbar.ejs') %>
+    <h1>Update Park'd Car: <%= car.carMake %> <%= car.carModel %></h1>
+    <form
+      action="/users/<%= user._id %>/cars/<%= car._id %>?_method=PUT"
+      method="POST"
+    >
+      <label for="valetName">Valet:</label>
+      <br />
+      <input
+        type="text"
+        name="valetName"
+        id="valetName"
+        value="<%= car.valetName %>"
+      />
+      <br />
+      <br />
+      <label for="fullName">Customer Name:</label>
+      <br />
+      <input
+        type="text"
+        name="fullName"
+        id="fullName"
+        value="<%= car.fullName %>"
+      />
+      <br />
+      <br />
+      <label for="phoneNumber">Phone Number:</label>
+      <br />
+      <input
+        type="text"
+        name="phoneNumber"
+        id="phoneNumber"
+        value="<%= car.phoneNumber %>"
+      />
+      <br />
+      <br />
+      <label for="carMake">Make:</label>
+      <br />
+      <input
+        type="text"
+        name="carMake"
+        id="carMake"
+        value="<%= car.carMake %>"
+      />
+      <br />
+      <br />
+      <label for="carModel">Model:</label>
+      <br />
+      <input
+        type="text"
+        name="carModel"
+        id="carModel"
+        value="<%= car.carModel %>"
+      />
+      <br />
+      <br />
+      <label for="carColor">Color:</label>
+      <br />
+      <input
+        type="text"
+        name="carColor"
+        id="carColor"
+        value="<%= car.carColor %>"
+      />
+      <br />
+      <br />
+      <label for="carType">Type:</label>
+      <br />
+      <br />
+      <select name="carType" id="carType">
+        <option value="Sedan" <%= car.carType === 'Sedan' ? "selected" : "" %> >Sedan</option>
+        <option value="Coupe" <%= car.carType === 'Coupe' ? "selected" : "" %> >Coupe</option>
+        <option value="SUV" <%= car.carType === 'SUV' ? "selected" : "" %> >SUV</option>
+        <option value="Van" <%= car.carType === 'Van' ? "selected" : "" %> >Van</option>
+        <option value="Pickup" <%= car.carType === 'Pickup' ? "selected" : "" %> >Pickup</option>
+        <option value="Other" <%= car.carType === 'Other' ? "selected" : "" %> >Other</option>
+      </select>
+      <br />
+      <br />
+      <label for="carYear">Year:</label>
+      <br />
+      <input
+        type="text"
+        name="carYear"
+        id="carYear"
+        value="<%= car.carYear %>"
+      />
+      <br />
+      <br />
+      <label for="licensePlate">License Plate:</label>
+      <br />
+      <input
+        type="text"
+        name="licensePlate"
+        id="licensePlate"
+        value="<%= car.licensePlate %>"
+      />
+      <br />
+      <br />
+      <label for="parkingLocation">Parking Spot:</label>
+      <br />
+      <input
+        type="text"
+        name="parkingLocation"
+        id="parkingLocation"
+        value="<%= car.parkingLocation %>"
+      />
+      <br />
+      <br />
+      <label for="damageStatus">Vehicle Damage?:</label>
+      <input
+        type="text"
+        name="damageStatus"
+        id="damageStatus"
+        value="<%= car.damageStatus %>"
+      />
+      <br />
+      <br />
+      <label for="damageStatusNotes">If damaged, please describe below:</label>
+      <br />
+      <textarea
+        name="damageStatusNotes"
+        id="damageStatusNotes"
+        value="<%= car.damageStatusNotes %>"
+      ></textarea>
+      <br />
+      <br />
+      <label for="parkingStatus">Parking Status:</label>
+      <br />
+      <br />
+      <select name="parkingStatus" id="parkingStatus">
+        <option value="Staged" <%= car.parkingStatus === 'Staged' ? "selected" : "" %> >Staged</option>
+        <option value="Parked" <%= car.parkingStatus === 'Parked' ? "selected" : "" %> >Parked</option>
+        <option value="Returned" <%= car.parkingStatus === 'Returned' ? "selected" : "" %> >Returned</option>
+      </select>
+      <br />
+      <br />
+      <label for="paidStatus">Paid?:</label>
+      <input
+        type="text"
+        name="paidStatus"
+        id="paidStatus"
+        value="<%= car.paidStatus %>"
+      />
+      <br />
+      <br />
+      <button type="submit">Update Car</button>
+    </form>
+  </body>
+</html>

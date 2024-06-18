@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     const currentUser = await User.findById(req.session.user._id).populate(
       "cars"
     );
-    console.log(currentUser.cars);
+    // console.log(currentUser.cars);
     res.render("cars/index.ejs", { cars: currentUser.cars });
   } catch (error) {
     console.log(error);
@@ -38,8 +38,44 @@ router.get("/:carId", async (req, res) => {
   try {
     const currentUser = await User.findById(req.session.user._id);
     const currentCar = await Car.findById(req.params.carId);
-    console.log(currentUser.carId);
+    // console.log(currentUser.carId);
     res.render("cars/show.ejs", { car: currentCar });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.delete("/:carId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const currentCar = await Car.findById(req.params.carId).deleteOne();
+    await currentUser.save();
+    res.redirect(`/users/${currentUser._id}/cars`);
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.get("/:carId/edit", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const currentCar = await Car.findById(req.params.carId);
+    res.render("cars/edit.ejs", { car: currentCar });
+  } catch (error) {
+    console.log(error);
+    res.redirect("/");
+  }
+});
+
+router.put("/:carId", async (req, res) => {
+  try {
+    const currentUser = await User.findById(req.session.user._id);
+    const currentCar = await Car.findByIdAndUpdate(req.params.carId, req.body);
+    console.log(req.body);
+    console.log("update", currentCar);
+    res.redirect(`/users/${currentUser._id}/cars`);
   } catch (error) {
     console.log(error);
     res.redirect("/");

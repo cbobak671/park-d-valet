@@ -9,7 +9,7 @@ const carSchema = new mongoose.Schema({
   carColor: String,
   carType: {
     type: String,
-    enum: ["sedan", "coupe", "suv", "van", "pickup", "other"],
+    enum: ["Sedan", "Coupe", "SUV", "Van", "Pickup", "Other"],
   },
   carYear: String,
   licensePlate: String,
@@ -18,7 +18,7 @@ const carSchema = new mongoose.Schema({
   damageStatusNotes: String,
   parkingStatus: {
     type: String,
-    enum: ["staged", "parked", "returned"],
+    enum: ["Staged", "Parked", "Returned"],
     equired: true,
   },
   paidStatus: String,
