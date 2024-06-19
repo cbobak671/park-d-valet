@@ -1,18 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
 h1 {
-    font-family: "Quicksand", sans-serif;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+  font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: rgb(34, 164, 147);
 }
 .new-car-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: "Quicksand", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: "Quicksand", sans-serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 20em;
+  height: 50%;
+  background-color: rgb(34, 164, 147);
+  padding: 30px 40px 20px 40px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(252, 72, 12);
+  color: white;
+  border-radius: 30px;
+  border: none;
+  margin: 15px 0;
+  font-size: 1.1em;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(34, 164, 147);
 }

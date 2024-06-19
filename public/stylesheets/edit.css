@@ -6,7 +6,7 @@ h1 {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  color:  rgb(34, 164, 147);
+  color: rgb(34, 164, 147);
 }
 .edit-car-form {
   display: flex;
@@ -51,5 +51,5 @@ button {
 button:hover {
   cursor: pointer;
   background-color: white;
-  color: rgb(252, 72, 12);
+  color: rgb(34, 164, 147);
 }

@@ -12,29 +12,33 @@
     <div class="show-page-body">
       <div class="show-page-header">
         <h1><%= car.carMake %> <%= car.carModel %></h1>
-        <p>Customer Name: <%= car.fullName %></p>
-        <p>Valet Name: <%= car.valetName %></p>
-        <p>Status: <%= car.parkingStatus %></p>
-        <p>Location - Parking Space: <%= car.parkingLocation %></p>
-        <p>Make and Model: <%= car.carMake %> <%= car.carModel %></p>
-        <p>Year: <%= car.carYear %></p>
-        <p>Color: <%= car.carColor %></p>
-        <p>Type: <%= car.carType %></p>
-        <p>License Plate: <%= car.licensePlate %></p>
-        <p>Damage?: <%= car.damageStatus %></p>
-        <p>Damage Details: <%= car.damageStatusNotes %></p>
-        <p>Paid?: <%= car.paidStatus %></p>
-
+        <div class="container">
+          <div class="show-page-column" id="box1">
+            <p>Customer Name: <%= car.fullName %></p>
+            <p>Valet Name: <%= car.valetName %></p>
+            <p>Status: <%= car.parkingStatus %></p>
+            <p>Location - Parking Space: <%= car.parkingLocation %></p>
+            <p>Make and Model: <%= car.carMake %> <%= car.carModel %></p>
+            <p>Year: <%= car.carYear %></p>
+          </div>
+          <div class="show-page-column" id="box2">
+            <p>Color: <%= car.carColor %></p>
+            <p>Type: <%= car.carType %></p>
+            <p>License Plate: <%= car.licensePlate %></p>
+            <p>Damage?: <%= car.damageStatus %></p>
+            <p>Damage Details: <%= car.damageStatusNotes %></p>
+            <p>Paid?: <%= car.paidStatus %></p>
+          </div>
+        </div>
         <a href="/users/<%= user._id %>/cars/<%= car._id %>/edit">
-          <button>Update Car</button>
+          <button id="update-car-btn">Update Car</button>
         </a>
-        <br />
         <br />
         <form
           action="/users/<%= user._id %>/cars/<%= car._id %>?_method=DELETE"
           method="POST"
         >
-          <button type="submit">Remove Car from Garage</button>
+          <button id="remove-car-btn" type="submit">Remove Car from Garage</button>
         </form>
       </div>
     </div>
