@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Update Car <%= car.carMake %> <%= car.carModel %></title>
     <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Update Park'd Car: <%= car.carMake %> <%= car.carModel %></h1>
+    <div class="edit-car-form">
     <form
       action="/users/<%= user._id %>/cars/<%= car._id %>?_method=PUT"
       method="POST"
@@ -155,5 +157,6 @@
       <br />
       <button type="submit">Update Car</button>
     </form>
+    </div>
   </body>
 </html>

@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 
+h1 {
+  color: rgb(34, 164, 147);
+}
 .garage-cars-body {
   font-family: "Quicksand", sans-serif;
   display: flex;
@@ -17,17 +20,25 @@
   width: 90%;
 }
 
+.index-page-btns {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  max-width: 700px;
+}
 .park-a-new-car-link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
   padding: 10px;
   background-color: rgb(34, 164, 147);
   color: white;
   border-radius: 30px;
   border: none;
   font-size: 1.1em;
-  padding: 2px 25px;
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
+  width: 100%;
 }
 
 .park-a-new-car-link:hover {
@@ -38,29 +49,39 @@
 }
 
 ul {
+  display: flex;
+  flex-direction: column;
   list-style: none;
-  width: 90%;
+  text-decoration: none;
+  align-items: center;
+  justify-items: center;
+  width: 50%;
+}
+/* width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
+} */
 
-ul > a {
+li > a {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: white;
-  width: 50%;
+  width: 100%;
   background-color: rgb(252, 72, 12);
   border-radius: 30px;
-  padding: 10px 20px;
+  padding: 10px 40px;
   margin: 15px 0;
-  font-weight: bold;
   text-align: center;
 }
 
-ul > a:hover {
+li > a:hover {
   background-color: white;
   color: rgb(252, 72, 12);
+  border-color: rgb(252, 72, 12);
 }
 
 .cars-index {

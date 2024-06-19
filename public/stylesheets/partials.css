@@ -27,3 +27,8 @@
   cursor: pointer;
   color: white;
 }
+
+.accountlink:hover {
+  cursor: pointer;
+  color: white;
+}

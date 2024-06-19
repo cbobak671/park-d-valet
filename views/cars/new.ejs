@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Park a New Car</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="/stylesheets/new.css">
   </head>
   <body>
     <%- include('../partials/_navbar.ejs') %>
     <h1>Add Car to be Park'd</h1>
+    <div class="new-car-form">
     <form action="/users/<%= user._id %>/cars" method="POST">
       <label for="valetName">Valet:</label>
       <br />
@@ -93,5 +95,6 @@
       <br />
       <button type="submit">Park Car</button>
     </form>
+  </div>
   </body>
 </html>
