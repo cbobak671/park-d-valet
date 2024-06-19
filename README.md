@@ -12,9 +12,9 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 
 ![Park'd App homepage](https://i.imgur.com/BX9KGNV.png)
 ![Park'd App create account page](https://i.imgur.com/rhvb4th.png)
-![Park'd App index of cars page](https://i.imgur.com/X4cJaJi.png)
-![Park'd App car details show page](https://i.imgur.com/bkioyoe.png)
-![Park'd App update car page](https://i.imgur.com/aJfaA85.png)
+![Park'd App index of cars page](https://i.imgur.com/X2UL50X.png)
+![Park'd App car details show page](https://i.imgur.com/v6Em6Dh.png)
+![Park'd App update car page](https://i.imgur.com/25GLwR8.png)
 
 ## Technologies Used
 
@@ -32,6 +32,7 @@ Park'd streamlines the valet and valet customer parking experience. Built for va
 
 - Freepik.com
 - Google Fonts API Library
+- David, Jan, Kristina
 
 ## Getting Started & Resources
 
